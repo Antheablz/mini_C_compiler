@@ -1,1 +1,5 @@
 - eval $(opam env)
+- cd compiler
+- dune build --root .
+- dune exec compiler --root .
+- dune clean --root .
