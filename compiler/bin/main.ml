@@ -1,10 +1,8 @@
 (* let () = print_endline "Hello, World!" *)
 
-let file = "c_compiler/return_2.c"
 
-
-
-
+let current_working_directory = Sys.getcwd ()
+let file = current_working_directory ^ "/../return_2.c"
 
 let () =
   let ic = open_in file in 
