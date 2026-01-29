@@ -1,0 +1,8 @@
+type tok =
+| OPEN_BRACKET
+| CLOSE_BRACKET
+| SEMICOLON
+| INT_KEYWORD
+| IDENTIFIER
+| INT of int
+| EOF
