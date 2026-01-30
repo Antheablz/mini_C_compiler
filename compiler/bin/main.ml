@@ -3,14 +3,14 @@ open Printf
 
 let get_token_list lexbuf =
   let rec work acc =
-    match Lexer.token lexbuf with
+    match Lexer.read_token lexbuf with
     | EOF -> acc
     | t -> work (t::acc)
   in List.rev (work[])
 
 
 let main =
-  let lexbuf = Lexing.from_string "{ test }" in
+  let lexbuf = Lexing.from_string "{ test printf }" in
   let token_list = get_token_list lexbuf in
   printf "Length: %d\n" (List.length token_list)
 
